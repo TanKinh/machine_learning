@@ -11,13 +11,11 @@ y_train = np.array(train_df.iloc[:,0].values)
 
 from sklearn.linear_model import LogisticRegression
 
-x_test = np.array(test_df.iloc[:, 0:].values)
-
 model = LogisticRegression(C = 1e5)
 model.fit(x_train, y_train)
 
-y_pre = model.predict(x_test)
-
-submissions=pd.DataFrame({"ImageId": list(range(1,len(y_pre)+1)),
+ubmissions=pd.DataFrame({"ImageId": list(range(1,len(y_pre)+1)),
                          "Label": y_pre})
-submissions.to_csv("mnist_tfkeras.csv", index=False, header=True)
+import time
+time.sleep(10)
+submissions.to_csv("/data/My Drive/data/input/mnist_tfkeras.csv", index=False, header=True)
