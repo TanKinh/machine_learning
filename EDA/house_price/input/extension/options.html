@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Saving options</title>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/drunken-parrot.css" media="all">
+
+</head>
+<body id="main_body" style="width:500px;">
+
+	<div class="panel panel-default">
+        <h1>Saving options</h1>
+
+	
+        <div class="panel-body">
+        <form id="form_730789" method="post" action="">
+            <div>
+                <h5  style="border-bottom: 1px dashed black;">Choose how you want to save your Facebook™ conversation.</h5>
+            
+                <!-- file type -->
+                <div>
+
+                    <h5 style="margin-left:15px;">File format: </h5>
+                    <label id='fullVerFormat'> (unlock the <a style='text-decoration: underline' href='http://chatsaver.org/buy.html'>full version</a> for 3$)</label>
+                    <div>
+                        <label class="radio" style="line-height:30px;">
+                            <input id="element_1_1" name="element_1" data-toggle="radio" type="radio" value="html" checked="true"
+                                   style="margin-right:5px;"/>
+                            Text</label>
+                    </div>
+                    
+                    <div>
+                        <label class="radio" style="line-height:30px;">
+                            <input id="element_1_4" name="element_1" data-toggle="radio" type="radio" value="csv" 
+                                   style="margin-right:5px;"/>
+                            CSV</label>
+                    </div>
+
+                    <div>
+                        <label class="radio" style="line-height:30px;">
+                            <input id="element_1_2" name="element_1" data-toggle="radio" type="radio" value="xhtml" 
+                               style="margin-right:5px;"/>
+                            HTML (including images and other files)                        
+                        </label>
+                    </div>
+<!--
+                    <div class="help-tip">
+                        <p>Images, emoticons and other files in the chat will be embedded in the HTML file. They will still be kept in Facebook servers and might stop being displayed after some time due to expiration of their tokes. </p>
+                     </div>
+-->
+
+                    <div>
+                        <label class="radio" style="line-height:30px;">
+                            <input id="element_1_3" name="element_1" data-toggle="radio" type="radio" value="zip" style="margin-right:5px;"/>
+                            Zip archive, including:
+                        </label>
+                    </div>                                                    
+
+<!--
+                    <div class="help-tip second">
+                        <p>The chosen items (images, emoticons, videos, etc.) will be saved locally to your computer and will be displayed in your chat as long as they are kept in the same folder as the HTML file. </p>
+                     </div>
+-->
+
+                    <div style="margin-left:20px;">
+                        <div>
+                            <label class="checkbox">
+                                <input id="pics" data-toggle="checkbox" type="checkbox" value="pics"/>
+                                images
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="checkbox">
+                                <input id="vids" data-toggle="checkbox" type="checkbox" value="vids"/>
+                                videos
+                            </label>
+                         </div>
+
+                        <div>
+                            <label class="checkbox">
+                                <input id="emoj" data-toggle="checkbox" type="checkbox" value="emoj"/>
+                                emoticons
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="checkbox">
+                                <input id="other" data-toggle="checkbox" type="checkbox" value="other"/>
+                                other files
+                            </label>  
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Style (messenger / regular) -->
+                <div>
+                    <h5 style="margin-left:15px;margin-top:25px;">Style:</h5>
+                    <label id='fullVerStyle'> (unlock the <a style='text-decoration: underline' href='http://chatsaver.org/buy.html'>full version</a> for 3$)</label>
+                    
+                    <div>
+                        <div>
+                        <label class="radio" style="line-height:30px;">
+                            <input id="regular" data-toggle="radio" name="saveStyle" type="radio" value="regular" checked="true"
+                                   style="margin-right:5px;"/>
+                            Old Facebook style</label>
+                        </div>
+                        
+                        <div>
+                        <label class="radio" style="line-height:30px;">
+                            <input id="messenger"  data-toggle="radio" name="saveStyle" type="radio" value="messenger" 
+                                   style="margin-right:5px;"/>
+                            Messenger</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Folder (INBOX / ARCHIVED / MSG REQUESTS) -->
+                <div>
+                    <h5 style="margin-left:15px;margin-top:25px;">Folder:</h5>
+                    
+                    <div>
+                        <div>
+                        <label class="radio" style="line-height:30px;">
+                            <input id="inbox" data-toggle="radio" name="saveFolder" type="radio" value="INBOX" checked="true"
+                                   style="margin-right:5px;"/>
+                            Inbox</label>
+                        </div>
+                        
+                        <div>
+                        <label class="radio" style="line-height:30px;">
+                            <input id="archived"  data-toggle="radio" name="saveFolder" type="radio" value="ARCHIVED" 
+                                   style="margin-right:5px;"/>
+                            Archived threads</label>
+                        </div>
+                        <label class="radio" style="line-height:30px;">
+                            <input id="requests"  data-toggle="radio" name="saveFolder" type="radio" value="PENDING" 
+                                   style="margin-right:5px;"/>
+                            Message requests</label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+          
+                    
+            <div id="status" style="min-height:35px;"></div>
+            <input class="btn btn-default" style="background: none;" id="save" type="button" name="submit" value="Save"/>
+
+        </form>	
+        </div>
+     	
+	   </div>
+	</body>
+	
+	<script src="js/options.js"></script>
+</html>
