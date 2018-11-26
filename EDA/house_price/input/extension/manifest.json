@@ -1,0 +1,76 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "name": "Messages Saver for Facebook™",
+    "description": "Saves Facebook™ conversations to computer.",
+    "version": "9.0",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [                  
+				"js/jquery-3.1.1.min.js",				
+				"js/options.js",
+                "js/spin.min.js",
+                "js/nanobar.js",
+				"js/download2.js",
+                "js/zip.js",
+                "js/z-worker.js",
+                "js/deflate.js",
+                "js/utils.js",
+                "js/FileSaver.min.js"              
+            ],
+			"css": [ 
+                "css/jquery-ui.min.css",
+                "css/custom.css",
+                "css/emoji.css",
+                "css/jquery-ui.structure.min.css",
+                "css/jquery-ui.theme.min.css",
+                "css/messenger.css"
+            ],
+            "all_frames": true,
+            "run_at" : "document_end"
+        }
+    ],	
+    "permissions": [
+		"activeTab",
+		"cookies",
+        "contextMenus",
+        "tabs",
+		"webRequest",
+		"webRequestBlocking",
+        "storage",        
+		"http://*/*",
+		"https://*/*",
+		"https://connect.facebook.net/en_US/all.js" ,
+        "debugger"
+    ],
+    "web_accessible_resources": [
+        "css/custom.css",
+        "css/emoji.css",
+        "css/messenger.css",
+        "js/z-worker.js",
+        "js/patch-worker.js",
+        "js/deflate.js",
+        "id.txt"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "icons": {
+		"128": "logos/icon.png",
+		"48": "logos/icon48.png"
+    },
+	"browser_action": {
+		"default_icon": "logos/icon.png",
+        "default_popup": "popup.html"
+	},
+	"options_ui": {
+        "page": "options.html",
+        "open_in_tab": true  
+    }
+}
